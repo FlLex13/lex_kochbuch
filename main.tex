@@ -40,16 +40,16 @@
 
 \begin{document}
 
-\begin{center}
-  {\LARGE \bfseries Mein Kochbuch}\\[1em]
-  {\small zusammengestellt \today}
-\end{center}
+\input{src/titelseite.tex}
 
 \tableofcontents
 \bigskip
 
+\newpage
+
 % Einbinden der Rezepte aus dem Ordner src
-\input{src/spaghetti.tex}
+
+\input{src/hauptgerichte/hauptgerichte.tex}
 
 % Weitere Rezepte: einfach neue .tex-Dateien in src/ legen und hier \input eintragen.
 
