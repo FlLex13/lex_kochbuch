@@ -1,0 +1,56 @@
+% main.txt -- Hauptdatei (Präambel, Makros, Layout, Einbindungen)
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}   % UTF-8 Eingabe
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}   % Deutsche Trennregeln, Überschriften etc.
+\usepackage{graphicx}         % Bilder
+\usepackage{enumitem}         % Listenanpassung
+\usepackage{hyperref}         % Links, Inhaltsverzeichnis
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% Pfad für Bilder (z.B. src/images/)
+\graphicspath{{src/images/}}
+
+% Einfache Kopf-/Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Mein Kochbuch}
+\rhead{\leftmark}
+\cfoot{\thepage}
+
+% Ein paar nützliche Makros
+\newcommand{\recipeAuthor}[1]{\textit{Autor: #1}}
+\newcommand{\recipeTime}[1]{\textbf{Zubereitungszeit:} #1\\}
+\newcommand{\recipePortions}[1]{\textbf{Portionen:} #1\\}
+\newcommand{\recipeCategory}[1]{\textbf{Kategorie:} #1\\}
+
+% Rezepte-Umgebung: erzeugt Abschnittsüberschrift + Metadaten
+\usepackage{xparse}
+\NewDocumentEnvironment{recipe}{mmmm}{%
+  \section{#1} % Titel
+  \recipeCategory{#2}
+  \recipeTime{#3}
+  \recipePortions{#4}
+  \medskip
+}{%
+  \bigskip
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \bfseries Mein Kochbuch}\\[1em]
+  {\small zusammengestellt \today}
+\end{center}
+
+\tableofcontents
+\bigskip
+
+% Einbinden der Rezepte aus dem Ordner src
+\input{src/spaghetti.tex}
+
+% Weitere Rezepte: einfach neue .tex-Dateien in src/ legen und hier \input eintragen.
+
+\end{document}
