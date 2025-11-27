@@ -1,24 +1,23 @@
-% main.txt -- Hauptdatei (Präambel, Makros, Layout, Einbindungen)
+% --- Beginn Beispielpräambel (einfügen/ersetzen) ---
 \documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}   % UTF-8 Eingabe
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}   % Deutsche Trennregeln, Überschriften etc.
-\usepackage{graphicx}         % Bilder
-\usepackage{enumitem}         % Listenanpassung
-\usepackage{hyperref}         % Links, Inhaltsverzeichnis
-\usepackage{geometry}
-\geometry{margin=2.5cm}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{parskip} % moderner Blocksatz: Abstand statt Einzug
+\setlength{\parindent}{0pt}
 
-% Pfad für Bilder (z.B. src/images/)
-\graphicspath{{src/images/}}
+\usepackage{xcolor}
+\definecolor{cookPrimary}{HTML}{A52A2A} % lila Akzent (anpassbar)
+\definecolor{cookSecondary}{HTML}{F5F5F7}
+\definecolor{cookFrame}{HTML}{606060}
 
-% Einfache Kopf-/Fußzeile
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{Mein Kochbuch}
-\rhead{\leftmark}
-\cfoot{\thepage}
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{cookFrame}}{\thesection}{1em}{}
+\titleformat{\subsection}{\bfseries\color{cookFrame}}{\thesubsection}{0.5em}{}
 
 % Ein paar nützliche Makros
 \newcommand{\recipeAuthor}[1]{\textit{Autor: #1}}
@@ -26,23 +25,62 @@
 \newcommand{\recipePortions}[1]{\textbf{Portionen:} #1\\}
 \newcommand{\recipeCategory}[1]{\textbf{Kategorie:} #1\\}
 
-% Rezepte-Umgebung: erzeugt Abschnittsüberschrift + Metadaten
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\newtcolorbox{recipebox}[1][]{
+enhanced,
+breakable,
+colback=white,
+colframe=cookPrimary,
+boxrule=2pt,
+arc=4mm,
+left=4mm,right=4mm,top=3mm,bottom=3mm,
+attach boxed title to top left={xshift=2mm,yshift=-3mm},
+boxed title style={colback=cookPrimary!15,boxrule=0pt},
+#1
+}
+
+% Rezept-Environment neu definieren (nutzt tcolorbox)
 \usepackage{xparse}
 \NewDocumentEnvironment{recipe}{mmmm}{%
-  \section{#1} % Titel
-  \recipeCategory{#2}
-  \recipeTime{#3}
-  \recipePortions{#4}
-  \medskip
+\par\medskip
+\ifdefined\phantomsection\phantomsection\fi % für hyperref-Anker (sicher, auch wenn hyperref fehlt)
+\addcontentsline{toc}{subsubsection}{#1}% "section" ändern in "subsection" wenn gewünscht
+\markboth{#1}{}% optional: Kopfzeile anpassen
+\begin{recipebox}[title={\large\bfseries #1}]
+\small\textbf{Kategorie:} #2 \quad\textbullet\quad \textbf{Zubereitungszeit:} #3 \quad\textbullet\quad \textbf{Portionen:} #4
+\medskip\par
 }{%
-  \bigskip
+\end{recipebox}
+\vspace{6pt}
 }
+
+% Icons (optional)
+\usepackage{pifont} % \ding{43} etc.
+
+% Überschriften/TOC etwas Abstand
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{4pt}
+
+% hübschere Header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textcolor{cookFrame}{Mein Kochbuch}}
+\rhead{\leftmark}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.8pt}
+\renewcommand{\headrule}{\color{cookPrimary}\hrule height \headrulewidth \vskip-\headrulewidth}
+% --- Ende Beispielpräambel ---
 
 \begin{document}
 
 \input{src/titelseite.tex}
 
 \tableofcontents
+\thispagestyle{empty}
+\setcounter{page}{2}
+
 \bigskip
 
 \newpage
