@@ -1,3 +1,3 @@
-# Eva`s Kochbuch
+# Ein Kochbuch für Lex Frauen \& Männer
 
-Tolle Rezepte für eine tolle Köchin
+Tolle Rezepte

@@ -66,7 +66,7 @@ boxed title style={colback=cookPrimary!15,boxrule=0pt},
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\textcolor{cookFrame}{Mein Kochbuch}}
+\lhead{\textcolor{cookFrame}{Mein Kochbuch}}            % TODO: Links Section (Hauptgerichte etc. einfügen)
 \rhead{\leftmark}
 \cfoot{\thepage}
 \renewcommand{\headrulewidth}{0.8pt}
@@ -85,10 +85,8 @@ boxed title style={colback=cookPrimary!15,boxrule=0pt},
 
 \newpage
 
-% Einbinden der Rezepte aus dem Ordner src
-
+\input{src/vorspeisen/vorspeisen.tex}
 \input{src/hauptgerichte/hauptgerichte.tex}
-
-% Weitere Rezepte: einfach neue .tex-Dateien in src/ legen und hier \input eintragen.
+\input{src/dessert/dessert.tex}
 
 \end{document}
