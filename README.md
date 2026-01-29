@@ -4,7 +4,9 @@
 
 ## Rezeptempfehlungen 
 
+* Von Eva: *Panko-Hähnchen in Erdnusssauce*
 * Von Florian: *Brokkoli Süßkartoffel Bowl*
+* Von Johannes: **
 
 ## Was ist das hier?
 
@@ -14,20 +16,16 @@
 * Vorteile eines digitalen Kochbuchs
     * Alle Rezepte an einem Ort
     * Suche nach Rezepten deutlich einfachen
-* Nachteile eines digitalen Kochbuchs
-    * Dieses Kochbuch ist noch relativ leer
-    * Kein haptisches Erlebnis
-    * Ohne digitales Endgerät nutzlos
 
 ## Interaktion bzw. Update-Wünsche
 
-### Level einfach
+### Level *Boomer-Freundlich*
 
 * Wunschrezepte oder Fehler jeglicher Art werden direkt an den Autor gemeldet (WhatsApp, E-Mail, etc.).
 * Rezepte können in Bild- & Textform gesendet werden.
 * Wünsche \& Anträge werden in die nächste Ausgabe aufgenommen.
 
-### Level "ich bin voll dabei"
+### Level *IT-Nerd*
 
 * GitHub App installieren \& Account erstellen
     * [Google Play Store](https://play.google.com/store/apps/details?id=com.github.android&hl=de)
