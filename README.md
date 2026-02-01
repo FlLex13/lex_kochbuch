@@ -4,13 +4,14 @@
 
 ## Rezeptempfehlungen 
 
-* Von Eva: *Panko-Hähnchen in Erdnusssauce*
+* Von Eva: *Tantanmen Ramen*
 * Von Florian: *Brokkoli Süßkartoffel Bowl*
-* Von Johannes: **
+* Von Johannes: *Der legendäre Nudelauflauf*
 
 ## Was ist das hier?
 
 * Interaktives \& digitales Kochbuch
+* Der Link ganz oben zeigt immer auf die aktuelle Version des Kochbuchs
 * Rezeptsammlung, die mit eurer Hilfe nach und nach erweitert werden soll
 * Für Personenangaben in den Rezepten wird keine Garantie übernommen
 * Vorteile eines digitalen Kochbuchs
