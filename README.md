@@ -32,6 +32,7 @@
     * [Google Play Store](https://play.google.com/store/apps/details?id=com.github.android&hl=de)
     * [App Store](https://apps.apple.com/de/app/github/id1477376905)
 * Kochbuch-Repository hinzufügen @@@
+  * Suche nach: *lex_kochbuch*
 * Benachrichtigung aktivieren: Um keinen Release zu Verpassen
     @@@ Bild
 * Änderungswünsche (neue Rezepte oder Fehler) per Issue
