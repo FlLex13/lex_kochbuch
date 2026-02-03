@@ -10,7 +10,7 @@
 
 ## Was ist das hier?
 
-* Interaktives \& digitales Kochbuch
+* Interaktives \& digitales Kochbuch im .pdf-Format
 * Der Link ganz oben zeigt immer auf die aktuelle Version des Kochbuchs
 * Rezeptsammlung, die mit eurer Hilfe nach und nach erweitert werden soll
 * Für Personenangaben in den Rezepten wird keine Garantie übernommen
