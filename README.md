@@ -34,14 +34,12 @@
 * Kochbuch-Repository hinzufügen @@@
   * Suche nach: *lex_kochbuch*
 * Benachrichtigung aktivieren: Um keinen Release zu Verpassen
-    @@@ Bild
-* Änderungswünsche (neue Rezepte oder Fehler) per Issue
+    * Auf Glocken-Symbol drücken
+    * *Releases* auswählen
+* Änderungswünsche (neue Rezepte oder Fehler) per *Issue*
     * Neues Issue erzeugen  
-      @@@ Bild
-    * Neues Rezept  
-        * Titel: *Rezept: <Rezept Name>*
-        * Beispiel: *Rezept: Schweinebraten*
-        * Kommentar: Das Rezept in Text- oder Bildform einfügen
+    * Titel: *Name des Rezeptes*
+    * Kommentar: *Rezept in text- oder bildform*
 
 ---
 
